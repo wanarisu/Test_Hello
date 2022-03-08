@@ -43,6 +43,9 @@ namespace Hello {
 	private: System::Windows::Forms::PictureBox^ pictureDice4;
 	private: System::Windows::Forms::PictureBox^ pictureDice5;
 	private: System::Windows::Forms::PictureBox^ pictureDice6;
+	private: System::Windows::Forms::Label^ labelResult;
+	private: System::Windows::Forms::PictureBox^ pictureWin;
+	private: System::Windows::Forms::PictureBox^ pictureLose;
 
 
 
@@ -75,6 +78,9 @@ namespace Hello {
 			this->pictureDice4 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureDice5 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureDice6 = (gcnew System::Windows::Forms::PictureBox());
+			this->labelResult = (gcnew System::Windows::Forms::Label());
+			this->pictureWin = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureLose = (gcnew System::Windows::Forms::PictureBox());
 			radioButtonKisu = (gcnew System::Windows::Forms::RadioButton());
 			radioButtonGusu = (gcnew System::Windows::Forms::RadioButton());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureDice1))->BeginInit();
@@ -83,29 +89,9 @@ namespace Hello {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureDice4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureDice5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureDice6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureWin))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureLose))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 27, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(128)));
-			this->label1->Location = System::Drawing::Point(83, 74);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(456, 72);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"Ž„‚ÆŸ•‰‚µ‚æ‚¤!";
-			// 
-			// button1
-			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"‚l‚r ‚oƒSƒVƒbƒN", 19.875F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(128)));
-			this->button1->Location = System::Drawing::Point(95, 204);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(444, 86);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"ƒXƒ^[ƒg";
-			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// radioButtonKisu
 			// 
@@ -133,6 +119,28 @@ namespace Hello {
 			radioButtonGusu->Text = L"‹ô”‚É‚á!";
 			radioButtonGusu->UseVisualStyleBackColor = true;
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 27, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(128)));
+			this->label1->Location = System::Drawing::Point(83, 74);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(456, 72);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"Ž„‚ÆŸ•‰‚µ‚æ‚¤!";
+			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"‚l‚r ‚oƒSƒVƒbƒN", 19.875F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(128)));
+			this->button1->Location = System::Drawing::Point(95, 204);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(444, 86);
+			this->button1->TabIndex = 1;
+			this->button1->Text = L"ƒXƒ^[ƒg";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
 			// pictureDice1
 			// 
 			this->pictureDice1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureDice1.Image")));
@@ -142,6 +150,7 @@ namespace Hello {
 			this->pictureDice1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureDice1->TabIndex = 4;
 			this->pictureDice1->TabStop = false;
+			this->pictureDice1->Visible = false;
 			// 
 			// pictureDise2
 			// 
@@ -152,6 +161,7 @@ namespace Hello {
 			this->pictureDise2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureDise2->TabIndex = 5;
 			this->pictureDise2->TabStop = false;
+			this->pictureDise2->Visible = false;
 			// 
 			// pictureDice3
 			// 
@@ -162,6 +172,7 @@ namespace Hello {
 			this->pictureDice3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureDice3->TabIndex = 6;
 			this->pictureDice3->TabStop = false;
+			this->pictureDice3->Visible = false;
 			// 
 			// pictureDice4
 			// 
@@ -172,6 +183,7 @@ namespace Hello {
 			this->pictureDice4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureDice4->TabIndex = 7;
 			this->pictureDice4->TabStop = false;
+			this->pictureDice4->Visible = false;
 			// 
 			// pictureDice5
 			// 
@@ -182,6 +194,7 @@ namespace Hello {
 			this->pictureDice5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureDice5->TabIndex = 8;
 			this->pictureDice5->TabStop = false;
+			this->pictureDice5->Visible = false;
 			// 
 			// pictureDice6
 			// 
@@ -192,12 +205,46 @@ namespace Hello {
 			this->pictureDice6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureDice6->TabIndex = 9;
 			this->pictureDice6->TabStop = false;
+			this->pictureDice6->Visible = false;
+			// 
+			// labelResult
+			// 
+			this->labelResult->AutoSize = true;
+			this->labelResult->Location = System::Drawing::Point(843, 503);
+			this->labelResult->Name = L"labelResult";
+			this->labelResult->Size = System::Drawing::Size(0, 24);
+			this->labelResult->TabIndex = 11;
+			// 
+			// pictureWin
+			// 
+			this->pictureWin->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureWin.Image")));
+			this->pictureWin->Location = System::Drawing::Point(402, 873);
+			this->pictureWin->Name = L"pictureWin";
+			this->pictureWin->Size = System::Drawing::Size(75, 48);
+			this->pictureWin->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureWin->TabIndex = 12;
+			this->pictureWin->TabStop = false;
+			this->pictureWin->Visible = false;
+			// 
+			// pictureLose
+			// 
+			this->pictureLose->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureLose.Image")));
+			this->pictureLose->Location = System::Drawing::Point(402, 873);
+			this->pictureLose->Name = L"pictureLose";
+			this->pictureLose->Size = System::Drawing::Size(75, 48);
+			this->pictureLose->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureLose->TabIndex = 13;
+			this->pictureLose->TabStop = false;
+			this->pictureLose->Visible = false;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(13, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(934, 979);
+			this->Controls->Add(this->pictureLose);
+			this->Controls->Add(this->pictureWin);
+			this->Controls->Add(this->labelResult);
 			this->Controls->Add(this->pictureDice6);
 			this->Controls->Add(this->pictureDice5);
 			this->Controls->Add(this->pictureDice4);
@@ -218,6 +265,8 @@ namespace Hello {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureDice4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureDice5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureDice6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureWin))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureLose))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
